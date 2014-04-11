@@ -130,8 +130,6 @@ Router.map(function() {
     action: function() {
       if (this.ready()) {
         this.render();
-      } else {
-        this.render("loading")
       }
     },
     data: function() {
@@ -159,8 +157,6 @@ Router.map(function() {
     action: function() {
       if (this.ready()) {
         this.render();
-      } else {
-        this.render("loading")
       }
     },
     data: function() {
@@ -175,8 +171,6 @@ Router.map(function() {
     action: function() {
       if (this.ready()) {
         this.render();
-      } else {
-        this.render("loading")
       }
     },
     data: function() {
@@ -204,8 +198,6 @@ Router.map(function() {
     action: function() {
       if (this.ready()) {
         this.render();
-      } else {
-        this.render("loading")
       }
     },
     data: function() {

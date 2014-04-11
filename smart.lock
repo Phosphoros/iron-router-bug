@@ -5,7 +5,7 @@
       "iron-router": {},
       "bootstrap-3": {},
       "npm": {},
-      "iron-router-progress": {}
+      "fontawesome4": {}
     },
     "packages": {
       "iron-router": {
@@ -23,10 +23,10 @@
         "tag": "v0.2.6",
         "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
       },
-      "iron-router-progress": {
-        "git": "https://github.com/Multiply/iron-router-progress.git",
-        "tag": "v0.3.1",
-        "commit": "3f7900feb4bb70a1289b39a1fdcd1f438c0335b3"
+      "fontawesome4": {
+        "git": "https://github.com/chrismbeckett/meteor-fontawesome4.git",
+        "tag": "v1.0.0",
+        "commit": "fe38ec775e974f0f7855d1693dc74fd4f1b4848c"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

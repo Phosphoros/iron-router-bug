@@ -1,4 +1,4 @@
 iron-router-bug
 ===============
 
-this repo is for sharing a minimal example of bugs regarding iron-router and or iron-router-progress
+if you hard refresh the page, sometimes Router.current() has a property page with a value, but it shouldn't.
