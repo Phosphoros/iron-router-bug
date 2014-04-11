@@ -1,0 +1,1 @@
+Burgers = new Meteor.Collection("burgers");

@@ -1,0 +1,1 @@
+Pizze = new Meteor.Collection("pizze");

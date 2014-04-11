@@ -1,0 +1,67 @@
+<head>
+  <title>iron-router-bug</title>
+</head>
+
+<template name="loading">
+...Loading
+</template>
+
+<template name="layout">
+  <a href="{{pathFor 'pizze'}}">Pizze</a><br/>
+  <a href="{{pathFor 'burgers'}}">Burgers</a>
+  <div class="container">
+    {{> yield}}
+  </div>
+</template>
+
+<template name="burgers">
+  {{#if burgers}}
+    {{> pagination pages}}
+      <div class="panel panel-default">
+        <div class="panel-body">
+          {{#each burgers}}
+            <a href="{{pathFor 'burger' _id=_id}}">{{name}}</a><br/>
+          {{/each}}
+        </div>
+      </div>
+    {{> pagination pages}}
+  {{else}}
+    <div class="hero">
+      <h1>There are no burgers</h1>
+    </div>
+  {{/if}}
+</template>
+
+<template name="burger">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      Name: {{name}}
+    </div>
+  </div>
+</template>
+
+<template name="pizze">
+  {{#if pizze}}
+    {{> pagination pages}}
+      <div class="panel panel-default">
+        <div class="panel-body">
+          {{#each pizze}}
+            <a href="{{pathFor 'pizza' _id=_id}}">{{name}}</a><br/>
+          {{/each}}
+        </div>
+      </div>
+    {{> pagination pages}}
+  {{else}}
+    <div class="hero">
+      <h1>There are no pizze</h1>
+    </div>
+  {{/if}}
+</template>
+
+<template name="pizza">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      Name: {{name}}
+    </div>
+  </div>
+</template>
