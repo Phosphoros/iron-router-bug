@@ -67,20 +67,18 @@ Router.map(function() {
       }
     },
     data: function() {
-      if (this.ready()) {
-        var pizze = Pizze.find({}, {
-          sort: {
-            name: 1
-          },
-          skip: (this.params.page - 1) * Session.get("documentsPerPage"),
-          limit: Session.get("documentsPerPage")
-        }).fetch();
-        var pages = getPages(this.params.page, Pizze.find({}).count(), this.params, this.route.originalPath);
+      var pizze = Pizze.find({}, {
+        sort: {
+          name: 1
+        },
+        skip: (this.params.page - 1) * Session.get("documentsPerPage"),
+        limit: Session.get("documentsPerPage")
+      });
+      var pages = getPages(this.params.page, Pizze.find({}).count(), this.params, this.route.originalPath);
 
-        return {
-          pizze: pizze,
-          pages: pages
-        }
+      return {
+        pizze: pizze,
+        pages: pages
       }
     }
   });
