@@ -3,8 +3,8 @@
 </head>
 
 <template name="layout">
-  <a href="{{pathFor 'pizze'}}">Pizze</a><br/>
-  <a href="{{pathFor 'burgers'}}">Burgers</a>
+    <a href="{{pathFor 'pizze'}}">Pizze</a>
+    <a href="{{pathFor 'burgers'}}">Burgers</a>
   <div class="container">
     {{> yield}}
   </div>
@@ -16,7 +16,7 @@
       <div class="panel panel-default">
         <div class="panel-body">
           {{#each burgers}}
-            <a href="{{pathFor 'burger' _id=_id}}">{{name}}</a><br/>
+            <button class="btn btn-default" burgerId="{{_id}}"><i class="fa fa-shopping-cart"></i> Buy</button> <a href="{{pathFor 'burger' _id=_id}}">{{name}}</a> {{clicked}}<br/>
           {{/each}}
         </div>
       </div>
@@ -42,7 +42,7 @@
       <div class="panel panel-default">
         <div class="panel-body">
           {{#each pizze}}
-            <a href="{{pathFor 'pizza' _id=_id}}">{{name}}</a><br/>
+            <button class="btn btn-default" pizzaId="{{_id}}"><i class="fa fa-shopping-cart"></i> Buy</button> <a href="{{pathFor 'pizza' _id=_id}}">{{name}}</a> {{clicked}}<br/>
           {{/each}}
         </div>
       </div>
